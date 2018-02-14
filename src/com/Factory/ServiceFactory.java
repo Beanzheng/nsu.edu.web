@@ -4,7 +4,7 @@ import com.Service.UserService;
 import com.ServiceImpl.UserServiceImpl;
 
 public class ServiceFactory {
-	public UserService getUserServiceInstace() {
+	public static UserService getUserServiceInstace() {
 		return new UserServiceImpl();
 	}
 }
