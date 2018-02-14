@@ -21,5 +21,17 @@ public class UserServiceImpl implements UserService{
 			return false;
 		}
 	}
+	@Override
+	public boolean resigter(String loginName, String loginPwd, String Sex)
+			throws Exception {
+		if(DAOFactory.getUserDaoInstance((Connection)
+				this.dbc.getConn()).resigter(loginName, loginPwd, Sex)){
+			System.out.println("注册业务逻辑成功");
+			return true;
+		}else {
+			System.out.println("注册业务逻辑成功");
+			return false;
+		}
+	}
 
 }

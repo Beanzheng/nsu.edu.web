@@ -37,4 +37,18 @@ public class JunitTestParam {
 		String loginPwd="ss";
 		Assert.assertTrue(service.loginCheck(loginName, loginPwd));
 	}
+	@Test
+	public void TestResigterDao() throws Exception{
+		String loginName="funcking";
+		String loginPwd="qwewss";
+		String Sex="ÄÐ";
+		dao.resigter(loginName, loginPwd, Sex);
+	}
+	@Test
+	public void TestResigterService() throws Exception{
+		String loginName="hello";
+		String loginPwd="qwes";
+		String Sex="Å®";
+		Assert.assertTrue(service.resigter(loginName, loginPwd, Sex));
+	}
 }
