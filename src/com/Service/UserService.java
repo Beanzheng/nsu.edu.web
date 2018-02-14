@@ -22,4 +22,13 @@ public interface UserService {
 	 * @throws Exception
 	 */
 	public boolean resigter(String loginName,String loginPwd,String Sex) throws Exception;
+	/**
+	 * 
+	 * @param loginName
+	 * @param loginPwd
+	 * @param NewPwd
+	 * @return
+	 * @throws Exception
+	 */
+	public boolean modPwd(String loginName,String loginPwd,String NewPwd) throws Exception;
 }

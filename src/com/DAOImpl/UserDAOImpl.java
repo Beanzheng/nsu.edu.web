@@ -49,4 +49,20 @@ public class UserDAOImpl extends AbstractDAOImpl implements UserDAO{
 		
 	}
 
+	@Override
+	public Boolean modPwd(String loginName, String loginPwd, String NewPwd)
+			throws Exception {
+		String sql="UPDATE user SET pwd=? WHERE userName=?";
+		super.pstm= super.conn.prepareStatement(sql);
+		super.pstm.setString(1, NewPwd);
+		super.pstm.setString(2, loginName);
+		if(super.pstm.executeUpdate() > 0){
+			System.out.println("ĞŞ¸ÄÃÜÂë³É¹¦,dao");
+			return true;
+		}else {
+			System.out.println("ĞŞ¸ÄÃÜÂëÊ§°Ü,dao");
+			return false;
+		}
+	}
+
 }

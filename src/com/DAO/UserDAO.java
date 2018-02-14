@@ -21,4 +21,14 @@ public interface UserDAO {
 	 * @throws Exception
 	 */
 	public Boolean resigter(String loginName,String loginPwd,String Sex) throws Exception;
+	/**
+	 * 
+	 * @param loginName
+	 * @param loginPwd
+	 * @param oldPwd
+	 * @return
+	 * @throws Exception
+	 */
+	public Boolean modPwd(String loginName,String loginPwd,String NewPwd) throws Exception;
+	
 }

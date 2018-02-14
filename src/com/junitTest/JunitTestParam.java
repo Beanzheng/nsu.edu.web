@@ -51,4 +51,19 @@ public class JunitTestParam {
 		String Sex="Ů";
 		Assert.assertTrue(service.resigter(loginName, loginPwd, Sex));
 	}
+	@Test
+	public void TestmodPwdDao() throws Exception{
+		String loginName="funcking";
+		String loginPwd="qwewss";
+		String NewPwd="123456";
+		Assert.assertTrue(dao.modPwd(loginName, loginPwd, NewPwd));
+
+	}
+	@Test
+	public void TestmodPwdService() throws Exception{
+		String loginName="hello";
+		String loginPwd="1234";
+		String NewPwd="12345";
+		Assert.assertTrue(service.modPwd(loginName, loginPwd, NewPwd));
+	}
 }

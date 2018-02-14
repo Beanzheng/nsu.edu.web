@@ -33,5 +33,24 @@ public class UserServiceImpl implements UserService{
 			return false;
 		}
 	}
+	@Override
+	public boolean modPwd(String loginName, String loginPwd, String NewPwd)
+			throws Exception {
+		if (DAOFactory.getUserDaoInstance((Connection)
+				this.dbc.getConn()).loginCheck(loginName, loginPwd)) {
+				System.out.println("旧密码输入成功,service");
+			if (DAOFactory.getUserDaoInstance((Connection)
+				this.dbc.getConn()).modPwd(loginName, loginPwd, NewPwd)) {
+				System.out.println("修改密码成功,service");
+				return true;
+			}else {
+				System.out.println("修改密码失败,service");
+				return false;
+			}
+		}else {
+				System.out.println("旧密码输入失败,service");
+			return false;
+		}
+	}
 
 }
