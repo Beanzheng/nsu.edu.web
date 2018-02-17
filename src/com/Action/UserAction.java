@@ -35,6 +35,7 @@ public class UserAction extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@SuppressWarnings("unused")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out=response.getWriter();
 		response.setCharacterEncoding("utf-8");
@@ -52,10 +53,6 @@ public class UserAction extends HttpServlet {
 			}
 		}catch(Exception e){
 			e.printStackTrace();
-		}
-				
-		
+		}				
 	}
-
-
 }
