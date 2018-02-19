@@ -25,14 +25,14 @@ public class MovieServiceImpl implements MovieService{
 
 	@Override
 	public List<Movie> accordType(String movieType) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		return DAOFactory.getMovieDaoInstance((Connection)
+				this.dbc.getConn()).accordType(movieType);
 	}
 
 	@Override
 	public List<Movie> listMovieDetail(String movieName) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		return DAOFactory.getMovieDaoInstance((Connection)
+				this.dbc.getConn()).listMovieDetail(movieName);
 	}
 
 }

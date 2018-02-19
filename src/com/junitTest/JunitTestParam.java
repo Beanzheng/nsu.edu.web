@@ -84,4 +84,24 @@ public class JunitTestParam {
 		String movieName="ÓÂ";
 		Assert.assertTrue(mservice.seaMovie(movieName));
 	}
+	@Test
+	public void TestAccordType() throws Exception{
+		String movieType="Ï²¾ç";
+		mdao.accordType(movieType);
+	}
+	@Test
+	public void TestMovieDetail() throws Exception{
+		String movieName="ÎÔµ×¾ÞÐÇ";
+		mdao.listMovieDetail(movieName);
+	}
+	@Test
+	public void TestAccordTypeService() throws Exception{
+		String movieType="¶¯×÷";
+		mservice.accordType(movieType);
+	}
+	@Test
+	public void TestListMovieService() throws Exception{
+		String mName="ÎÔµ×¾ÞÐÇ";
+		mservice.listMovieDetail(mName);
+	}
 }
